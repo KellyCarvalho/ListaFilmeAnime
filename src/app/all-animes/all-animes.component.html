@@ -1,0 +1,31 @@
+
+<div class="spinner-grow text-primary" role="status" *ngIf="loading">
+    <span class="visually-hidden">  Loading...</span>
+  </div>
+  
+<h1 *ngIf="!loading">Lista de Animes</h1>
+
+<ul class="list-group" *ngIf="!loading">
+    
+    <li class="list-group-item"> <div *ngFor="let anime of animes" class="card" style="width: 500px;">
+        <img [src]="anime.attributes.posterImage.medium" class="card-img-top" alt="...">
+        <h1>{{anime.attributes.canonicalTitle}}</h1>
+        <div class="card-body">
+          <p class="card-text">{{anime.attributes.description}}</p>
+          <button (click)="favoritarAnime(anime)" type="button" class="btn btn-dark">Favoritar</button>
+
+        </div>
+        
+    </div>
+    <br></li>
+    
+  </ul>
+  <hr>
+
+
+
+
+   
+
+
+  

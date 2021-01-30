@@ -1,0 +1,17 @@
+<h1>Filmes</h1>
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Data</th>
+        <th>Nome</th>
+    </tr>
+
+    <tr *ngFor="let filme of favoritos" >
+        <td> {{filme.id}}  </td>
+        <td> {{filme.data}}  </td>
+        <td> {{filme.nome}} </td>
+        <button (click)="remover(filme)" >Remover Filme</button>
+       
+    </tr>
+   
+</table>
